@@ -21,7 +21,13 @@ header {
 		.content {		
 			@include span(11 of 20);
 			padding-left: span(2 of 18);
-			margin-top: 160px;;
+			margin-top: 160px;
+			@include breakpoint((max-width 799px)) {
+				@include span(16 of 20);
+			}
+			@include breakpoint((max-width 479px)) {
+				margin-top: 100px;
+			}
 		}
 	}
 	.header-description {
@@ -45,6 +51,10 @@ header {
 	&-item {
 		@include span(1);		
 		text-align: center;
+		@include breakpoint((max-width 479px)) {
+			@include span(3);
+			margin-top: 30px;
+		}
 	}
 	&-icon {
 		height: 100px;
@@ -62,10 +72,18 @@ header {
 	@include layout(2 1/6 fluid float inside);
 	&-email-form {
 		@include span(1);
+		@include breakpoint((max-width 799px)) {
+			@include span(2);
+			margin-bottom: 30px;
+		}
 	}
 	&-video{
 		@include span(1);
 		text-align: right;
+		@include breakpoint((max-width 799px)) {
+			@include span(2);
+			text-align: left;
+		}
 	}
 }
 

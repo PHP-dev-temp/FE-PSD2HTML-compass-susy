@@ -1,0 +1,91 @@
+// Vertical_rhythm 
+ 
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+@include establish-baseline;
+
+html {
+  font-family: $font-roboto;
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+.container {
+	@include container(80%);
+	max-width: 1200px;
+}
+
+
+h2 {
+	font-family: $font-raleway;
+	font-weight: 600;
+	@include adjust-font-size-to(22px);
+	margin: 16px 0 9px 0;
+}
+p, q {
+	color: $medium-gray;
+}
+input, button {
+	height: 56px;
+	display: inline-block;
+	vertical-align: middle;
+	border: none;
+}
+input {
+	max-width:300px;
+	width: 66%;
+	padding: 25px;
+	@include adjust-font-size-to(18px);
+	@include border-top-left-radius(15px);
+	@include border-bottom-left-radius(15px);
+}
+button {
+	font-family: $font-raleway;
+	font-weight: 700;
+	@include adjust-font-size-to(22px);
+	max-width:150px;
+	width: 32%;	
+	padding: 0;
+	line-height: 50px;
+	color: $white;
+	background: $system-green;
+	@include border-top-right-radius(15px);
+	@include border-bottom-right-radius(15px);
+}
+form {
+	margin: 25px 0;	
+}
+iframe{
+	display: block;
+	max-width:500px;
+	width: 100%;
+	height: 375px;
+	@include border-radius(20px, 20px);
+}
+section {
+	padding: 60px 0;
+}
+q {
+	@include adjust-font-size-to(18px);
+	font-style: italic;	
+	line-height: 150%;
+}
+cite {
+	@include adjust-font-size-to(18px);
+	font-weight: 800;	
+	display: block;	
+	margin: 20px;
+}
+li {
+	display: inline-block;
+	margin: 0 19px;
+	float: none;
+	> a {
+		text-decoration: none;
+		color: $medium-gray;
+	}
+	> a:hover {
+		text-decoration: underline;
+	}
+}

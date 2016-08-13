@@ -1,0 +1,147 @@
+header {
+	color: $white;
+	.top-line{
+		height: 10px;
+		width: 100%;
+		background: $system-green;
+	}
+	.header-caption {
+		@include adjust-font-size-to(60px);
+		font-family: $font-pacifico;
+		display: block;
+		> span {
+			color: $system-green;
+		}
+	}
+	.item {
+		height: 600px;
+		background-color: $dark-braon;
+		background-repeat: no-repeat;
+		background-position: center center;
+		.content {		
+			@include span(11 of 20);
+			padding-left: span(2 of 18);
+			margin-top: 160px;;
+		}
+	}
+	.header-description {
+		@include adjust-font-size-to(26px);
+		margin-top: 9.92%;
+		line-height: 145%;
+	}
+	#header-mac {
+		background-image: url("../images/header-bg-1.jpg");
+	}
+	#header-android {
+		background-image: url("../images/header-bg-2.jpg");
+	}
+	#header-windows {
+		background-image: url("../images/header-bg-3.jpg");
+	}
+}
+
+.features {
+	@include layout(3 1/4 fluid float inside);
+	&-item {
+		@include span(1);		
+		text-align: center;
+	}
+	&-icon {
+		height: 100px;
+		width: 100px;
+		background: $system-green;
+		color: $white;
+		@include adjust-font-size-to(50px);
+		@include border-radius(100px, 100px);
+		line-height:100px;
+	}
+}
+
+.get-notified {
+	background: $gray;
+	@include layout(2 1/6 fluid float inside);
+	&-email-form {
+		@include span(1);
+	}
+	&-video{
+		@include span(1);
+		text-align: right;
+	}
+}
+
+.teachers {
+	text-align:center;
+	.words {
+		width: 72%;
+		margin: auto;
+	}
+	&-pictures{
+		position: relative;
+		height: 50px;
+		overflow: hidden;
+		margin: auto;
+		&-container {
+			display: inline-block;
+			margin-right: 5px;
+			background: $system-green;
+			img:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+	.shadow-left {
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 1px;
+		height: 50px;
+		@include box-shadow($white 20px 0 30px 30px);
+		z-index: 100;
+	}
+	.shadow-right {
+		position:absolute;
+		top: 0;
+		right: 0;
+		width: 1px;
+		height: 50px;
+		@include box-shadow($white -20px 0 30px 30px);
+		z-index: 100;
+	}
+	.social {
+		&-caption {
+			@include adjust-font-size-to(24px);
+			font-family: $font-raleway;
+			font-weight: 600;
+			margin: 50px 0 20px 0;
+		}
+		&-icons {
+			margin-top: 20px;
+			cursor: pointer;
+		}
+		&-icon {
+			display: inline-block;
+			width: 37px;
+			height: 37px;
+			margin: 5px;			
+			background: $gray;
+			color: $white;
+			font-family: FontAwesome;
+			@include adjust-font-size-to(18px);
+			@include border-radius(37px, 37px);
+			line-height:38px;
+		}
+		&-icon:hover {	
+			background: $system-green;
+		}
+	}
+}
+
+footer {
+	background: $gray;
+	padding: 55px 0;
+	ul{
+		text-align:center;
+	float: none;
+	}
+}
+

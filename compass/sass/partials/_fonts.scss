@@ -1,0 +1,12 @@
+// Importing fonts.
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,800);
+@import url(https://fonts.googleapis.com/css?family=Raleway:600,700);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+$font-roboto: 'Roboto', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+$font-pacifico: 'Pacifico', cursive;
+
+@import "font-awesome-compass";
+@import "font-awesome";
